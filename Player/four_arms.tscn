@@ -1,0 +1,78 @@
+[gd_scene load_steps=14 format=3 uid="uid://knhs7lc8qpvu"]
+
+[ext_resource type="Script" uid="uid://bh62vhwhbopfq" path="res://Player/fourarms.gd" id="1_ml26g"]
+[ext_resource type="Texture2D" uid="uid://dgbnv8j7lm4ar" path="res://four arms/idle/stand1.png" id="2_vrsyi"]
+[ext_resource type="Texture2D" uid="uid://dsfhnss4w6mg8" path="res://four arms/idle/stand2.png" id="3_t21rq"]
+[ext_resource type="Texture2D" uid="uid://ca770ukmv6fch" path="res://four arms/idle/stand3.png" id="4_2n7xr"]
+[ext_resource type="Texture2D" uid="uid://de5l8ado2j08p" path="res://four arms/walk/walk1.png" id="5_2n7xr"]
+[ext_resource type="Texture2D" uid="uid://dsq1mecgii1g5" path="res://four arms/idle/stand4.png" id="5_x52su"]
+[ext_resource type="Texture2D" uid="uid://loxdkrx2gmuq" path="res://four arms/walk/walk2.png" id="6_x52su"]
+[ext_resource type="Texture2D" uid="uid://ceugsj5g4yyf6" path="res://four arms/walk/walk3.png" id="7_bqq81"]
+[ext_resource type="Texture2D" uid="uid://deaexmm0hjgrh" path="res://four arms/walk/walk4.png" id="8_dkyc2"]
+[ext_resource type="Texture2D" uid="uid://bl3c4y22mc7ps" path="res://four arms/walk/walk5.png" id="9_yvnfo"]
+[ext_resource type="Texture2D" uid="uid://4gefnvb4566y" path="res://four arms/walk/walk6.png" id="10_57qin"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_6to55"]
+radius = 64.0
+height = 192.0
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ml26g"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_vrsyi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_t21rq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_2n7xr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_x52su")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_2n7xr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_x52su")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_bqq81")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_dkyc2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_yvnfo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_57qin")
+}],
+"loop": true,
+"name": &"walk",
+"speed": 5.0
+}]
+
+[node name="four arms" type="CharacterBody2D"]
+script = ExtResource("1_ml26g")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_6to55")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(-8, 0)
+scale = Vector2(0.776316, 0.84075)
+sprite_frames = SubResource("SpriteFrames_ml26g")
+animation = &"idle"
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(-8, 0)
+scale = Vector2(0.776316, 0.84075)
+limit_left = 0
+limit_top = 0
