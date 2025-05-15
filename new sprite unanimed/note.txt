@@ -2,7 +2,7 @@ I kept running into an issue when I got the other sprites online I couldn't anim
 I could not animate it because when i did there was a different in size. the walk animation was not correct because each framed would be noticeably bigger than the other.
 there was a noticeable difference between when I asked the character to be idle and when i asked it to move.
 
-show i chose to use pivot animator to make the characters so i could manually create their movements and make the sprites myself. making this on pivot animator was a lot harder than I thought and used a bunch of videos and references, i scrapped it because it did not have the cartoony feeling and colors i needed for the game feel.
+so i chose to use pivot animator to make the characters so i could manually create their movements and make the sprites myself. making this on pivot animator was a lot harder than I thought and used a bunch of videos and references, i scrapped it because it did not have the cartoony feeling and colors i needed for the game feel.
 
 this is unfinished, i made an attack pattern for vilgax
 
